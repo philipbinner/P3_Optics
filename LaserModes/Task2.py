@@ -1,5 +1,10 @@
+#%%
 # Task 2: Laser Cavity Stability
-# For reference, see Alan Forrester, Margareta Lönnqvist, Miles J. Padgett, and Johannes Courtial, "Why are the eigenmodes of stable laser resonators structurally stable?," Opt. Lett. 27, 1869-1871 (2002).
+# For reference, see Alan Forrester, Margareta Lönnqvist, 
+# Miles J. Padgett, and Johannes Courtial, 
+# "Why are the eigenmodes of stable laser resonators structurally stable?," 
+# Opt. Lett. 27, 1869-1871 (2002).
+#%%
 
 import numpy as np
 from matplotlib import pyplot as plt
@@ -12,7 +17,7 @@ def new_obj_dist(obj_dist, f, l):
 def omega_dist(O, L):
     return np.pi +2*np.arctan((O-L)/(np.sqrt(1-L**2)))
 
-n = 10000
+n = 50000
 l = 3 #cavity length
 f = 10 #focal length of concave mirror
 u = l/4 #initial object distance
@@ -46,3 +51,5 @@ plt.xlabel("omega")
 plt.ylabel("Counts")
 plt.title("Omega Distribution in Resonator")
 plt.show()
+
+# %%
